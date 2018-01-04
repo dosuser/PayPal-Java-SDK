@@ -129,7 +129,7 @@ public class PayPalHttpClientTest extends PayPalWireMockHarness {
 		client.execute(request);
 
 		verify(postRequestedFor(urlEqualTo("/v1/oauth2/token"))
-				.withRequestBody(equalTo("grant_type=client_credentials&refresh_token=refresh-token")));
+				.withRequestBody(equalTo("grant_type=refresh_token&refresh_token=refresh-token")));
 	}
 
 	@Test(expectedExceptions = {UnsupportedEncodingException.class})

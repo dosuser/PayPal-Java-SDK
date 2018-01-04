@@ -16,6 +16,6 @@ public class AccessTokenRequest extends HttpRequest<AccessToken> {
 
 	public AccessTokenRequest(PayPalEnvironment credentials, String refreshToken) {
 		this(credentials);
-		super.requestBody("grant_type=client_credentials&refresh_token=" + refreshToken);
+		super.requestBody("grant_type=refresh_token&refresh_token=" + refreshToken);
 	}
 }
